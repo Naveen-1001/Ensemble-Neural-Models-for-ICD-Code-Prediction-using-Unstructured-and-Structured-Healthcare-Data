@@ -1,0 +1,33 @@
+cache_dir =  "../cache"
+data_dir = "../data"
+id_col_name = "HADM_ID"
+label_col_name = "ICD9_CODE"
+text_col_name= "TEXT"
+desc_col_name = "DESC"
+
+batch_size=32
+d_a=256
+d_b = 256
+n_labels=8907
+attention_mode = "label"
+use_last_hidden_state=0
+mode="static"
+n_layers = 1
+hidden_size =  256
+bidirectional =1
+rnn_model="LSTM"
+dropout=0.3
+max_seq_length=2500
+min_seq_length=-1
+multilabel=1
+n_epoch=50
+optimiser="adamw" # "adam", "sgd", "adadelta", "adamw","adagrad"
+lr=0.001
+embedding_mode="word2vec"
+embedding_size=100
+embedding_file="../data/processed_50.embed"
+
+main_metric="micro_f1"
+shuffle_data=1
+dropout=0.3
+min_word_frequency=-1
